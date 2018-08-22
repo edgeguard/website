@@ -1,0 +1,19 @@
+
+@import '../styles.scss';
+
+.header {
+    background-color: $color-purple-dark;
+    color: $color-white;
+    margin: 0px;
+    height: 40px;
+    line-height: 40px;
+    width: 100%;
+    padding: 8px;
+
+    .header-text {
+        float: left;
+        font-family: 'Monoton';
+        font-size: 24px;
+        vertical-align: middle;
+    }
+}
