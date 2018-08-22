@@ -1,0 +1,44 @@
+@import '../../styles.scss';
+
+.navbar {
+    background-color: $color-purple-dark;
+    color: $color-white;
+
+	.header {
+		margin: 0px;
+		height: 70px;
+		width: 100%;
+		padding: 8px 12px;
+		box-sizing: border-box;
+		border-bottom: 1px solid $color-white;
+	}
+
+	.flex-container {
+		height: 100%;
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+	}
+
+    .navbar-text {
+		float: left;
+        font-family: 'Monoton';
+        font-size: 32px;
+        vertical-align: middle;
+	}
+	.guard {
+		color: lighten($color-purple-light, 10%);
+	}
+	
+	.menu-icon {
+		margin-right: 8px;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+
+	.menu {
+		padding: 8px 16px;
+		font-size: 16px;
+	}
+}

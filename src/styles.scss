@@ -6,8 +6,10 @@ $color-purple-dark: #4b3570;
 $color-purple-light: #9a7fc7;
 
 body {
+	box-sizing: border-box;
     background-color: $color-white;
-    font-family: 'Montserrat', sans-serif;
+	font-family: 'Montserrat', sans-serif;
+	font-size: 10px;
     margin: 0;
 }
 
