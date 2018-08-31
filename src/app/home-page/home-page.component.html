@@ -1,0 +1,12 @@
+
+<h1>
+Welcome to Edge Guard, a podcast where we take a closer look at games on the fringe.
+</h1>
+
+<div>
+	Latest Episode:
+</div>
+
+<episode-card *ngIf="feedLoaded | async" [episodeData]="feed?.items[0]"></episode-card>
+
+

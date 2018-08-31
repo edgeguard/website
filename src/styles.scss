@@ -1,13 +1,14 @@
 /* You can add global styles to this file, and also import other style files */
 @import url('https://fonts.googleapis.com/css?family=Monoton|Montserrat');
 
-$color-white: #e5e1f7;
+$color-white: #fcfbfe;
 $color-purple-dark: #4b3570;
 $color-purple-light: #9a7fc7;
+$color-purple-lightest: #e5e1f7;
 
 body {
 	box-sizing: border-box;
-    background-color: $color-white;
+    background-color: $color-purple-lightest;
 	font-family: 'Montserrat', sans-serif;
 	font-size: 10px;
     margin: 0;

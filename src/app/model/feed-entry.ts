@@ -1,3 +1,5 @@
+import { EntryEnclosure } from "./entry-enclosure";
+
 export interface FeedEntry {
     title: string,
     link: string,
@@ -7,5 +9,6 @@ export interface FeedEntry {
     author: string,
     thumbnail: string,
     description: string,
-    content: string
+	content: string
+	enclosure: EntryEnclosure
   }

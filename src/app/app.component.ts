@@ -8,23 +8,9 @@ import { OnInit } from '@angular/core';
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss']
 })
-export class AppComponent implements OnInit{
-  public feed: Feed;
-  constructor(
-    private rssService: RssFeedService
-  ) { }
+export class AppComponent {
+  constructor() { }
 
   title = 'edgeguard-website';
 
-  ngOnInit() {
-    this.refreshRss();
-  }
-
-  refreshRss() {
-    this.rssService.getFeedContent('https://edgeguard.podbean.com/feed.xml')
-        .subscribe( feed => {
-          console.log(feed);
-          this.feed = feed;
-        });
-  }
 }

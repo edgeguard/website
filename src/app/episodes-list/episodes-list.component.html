@@ -1,0 +1,9 @@
+<div class="title">
+	Episodes:
+</div>
+
+<div *ngIf="feedLoaded | async">
+	<div class="card-wrapper" *ngFor="let item of feed.items">
+		<episode-card [episodeData]="item"></episode-card>
+	</div>
+</div>

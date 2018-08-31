@@ -1,14 +1,10 @@
 <!--The content below is only a placeholder and can be replaced.-->
 <app-navbar></app-navbar>
-<div class="main-content">
-  <h1>
-    Welcome to Edge Guard, a podcast where we take a closer look at games on the fringe.
-  </h1>
-
-  <button (click)="refreshRss()">Refresh RSS</button>
-
-  <div>RSS Stuff: {{ feed?.feed.description }}</div>
+<div class="main-padding">
+	<router-outlet></router-outlet>
 </div>
+
+
 
 
 

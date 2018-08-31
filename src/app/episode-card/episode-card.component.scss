@@ -1,0 +1,25 @@
+@import '../../styles.scss';
+
+.episode-card {
+	background-color: $color-white;
+	box-shadow: 5px 5px 8px -2px rgba(136,136,136,0.75);
+	border-radius: 4px;
+	// border: solid 1px $color-purple-dark;
+	padding: 16px;
+	.a {
+		font-size: 16px;
+	}
+}
+
+.title {
+	font-size: 24px;
+	font-weight: bold;
+}
+
+.description {
+	font-size: 16px;
+}
+
+audio {
+	margin-top: 16px;
+}

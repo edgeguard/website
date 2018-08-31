@@ -1,0 +1,15 @@
+<div class="episode-card">
+	<div class="title">
+		{{ episodeData?.title }}
+	</div>
+	<div class="description">
+		<span [innerHTML]="episodeData?.description | truncate : 300"></span>
+		<a>Read More</a>
+	</div>
+
+	<audio controls>
+		<source src="{{episodeData?.enclosure.link}}" type="audio/mpeg">
+		It looks like your browser doesn't support audio elements! Sorry about that.
+	</audio>
+</div>
+ 
