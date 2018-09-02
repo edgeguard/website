@@ -3,7 +3,7 @@
 </div>
 
 <div *ngIf="feedLoaded | async">
-	<div class="card-wrapper" *ngFor="let item of feed.items">
+	<div class="card-wrapper" *ngFor="let item of episodes">
 		<episode-card [episodeData]="item"></episode-card>
 	</div>
 </div>

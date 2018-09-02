@@ -1,15 +1,14 @@
-<div class="episode-card">
+<!-- <div class="episode-detail">
 	<div class="title">
-		{{ episodeData.title }}
+		{{ episodeData?.title }}
 	</div>
 	<div class="description">
-		<span [innerHTML]="episodeData.description | truncate : 300"></span>
-		<a routerLink="/episodes/{{ episodeData.guid | guid }}">Read More</a>
+		<span [innerHTML]="episodeData?.description"></span>
 	</div>
 
 	<audio controls>
 		<source src="{{episodeData?.enclosure.link}}" type="audio/mpeg">
 		It looks like your browser doesn't support audio elements! Sorry about that.
 	</audio>
-</div>
- 
+</div> -->
+{{guid}}

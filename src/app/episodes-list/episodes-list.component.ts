@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Feed } from '../model/feed';
-import { RssFeedService } from '../rss-feed-service.service';
+import { FeedDataStore } from '../feed-data.store';
+import { FeedEntry } from '../model/feed-entry';
 
 @Component({
   selector: 'app-episodes-list',
@@ -10,20 +11,17 @@ import { RssFeedService } from '../rss-feed-service.service';
 export class EpisodesListComponent implements OnInit {
 
 	feedLoaded: Promise<boolean>;
-	public feed: Feed;
+	public episodes: FeedEntry[];
 
-	constructor( public rssService: RssFeedService ) { }
+	constructor( public feedStore: FeedDataStore ) { }
 
 	ngOnInit() {
-		this.refreshRss();
-	}
-
-	refreshRss() {
-	this.rssService.getFeedContent('https://edgeguard.podbean.com/feed.xml')
-		.subscribe( feed => {
-			this.feed = feed;
-			this.feedLoaded = Promise.resolve(true);
-		});
+		this.feedStore.getData()
+			.subscribe( feed => {
+				console.log(feed);
+				this.episodes = feed.items;
+				this.feedLoaded = Promise.resolve(true);
+			});
 	}
 
 }

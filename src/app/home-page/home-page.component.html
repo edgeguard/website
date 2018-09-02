@@ -3,10 +3,10 @@
 Welcome to Edge Guard, a podcast where we take a closer look at games on the fringe.
 </h1>
 
-<div>
+<h1>
 	Latest Episode:
-</div>
+</h1>
 
-<episode-card *ngIf="feedLoaded | async" [episodeData]="feed?.items[0]"></episode-card>
+<episode-card *ngIf="feedLoaded | async" [episodeData]="latestEpisode"></episode-card>
 
 

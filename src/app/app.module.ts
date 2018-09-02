@@ -10,6 +10,9 @@ import { EpisodeCardComponent } from './episode-card/episode-card.component';
 import { AppRoutingModule } from './app-routing.module';
 import { HomePageComponent } from './home-page/home-page.component';
 import { TruncatePipe } from './truncate.pipe';
+import { EpisodeDetailComponent } from './episode-detail/episode-detail.component';
+import { GuidPipe } from './guid.pipe';
+import { FeedDataStore } from './feed-data.store';
 
 @NgModule({
   declarations: [
@@ -18,14 +21,16 @@ import { TruncatePipe } from './truncate.pipe';
     EpisodesListComponent,
     EpisodeCardComponent,
     HomePageComponent,
-    TruncatePipe
+    TruncatePipe,
+    EpisodeDetailComponent,
+    GuidPipe
   ],
   imports: [
     BrowserModule,
     HttpModule,
     AppRoutingModule
   ],
-  providers: [RssFeedService],
+  providers: [RssFeedService, FeedDataStore],
   bootstrap: [AppComponent]
 })
 
