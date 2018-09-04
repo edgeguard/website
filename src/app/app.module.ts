@@ -12,7 +12,8 @@ import { HomePageComponent } from './home-page/home-page.component';
 import { TruncatePipe } from './truncate.pipe';
 import { EpisodeDetailComponent } from './episode-detail/episode-detail.component';
 import { GuidPipe } from './guid.pipe';
-import { FeedDataStore } from './feed-data.store';
+import { AboutPageComponent } from './about-page/about-page.component';
+import { ContactPageComponent } from './contact-page/contact-page.component';
 
 @NgModule({
   declarations: [
@@ -23,14 +24,16 @@ import { FeedDataStore } from './feed-data.store';
     HomePageComponent,
     TruncatePipe,
     EpisodeDetailComponent,
-    GuidPipe
+    GuidPipe,
+    AboutPageComponent,
+    ContactPageComponent
   ],
   imports: [
     BrowserModule,
     HttpModule,
     AppRoutingModule
   ],
-  providers: [RssFeedService, FeedDataStore],
+  providers: [RssFeedService],
   bootstrap: [AppComponent]
 })
 

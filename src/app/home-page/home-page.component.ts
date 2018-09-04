@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { Feed } from '../model/feed';
-import { FeedDataStore } from '../feed-data.store';
 import { FeedEntry } from '../model/feed-entry';
+import { RssFeedService } from '../rss-feed-service.service';
 
 @Component({
   selector: 'app-home-page',
@@ -12,10 +11,10 @@ export class HomePageComponent implements OnInit {
 	feedLoaded: Promise<boolean>;
 	public latestEpisode: FeedEntry;
 
-	constructor( public feedStore: FeedDataStore) { }
+	constructor( public rssService: RssFeedService) { }
 
 	ngOnInit() {
-		this.feedStore.getData()
+		this.rssService.getFeedContent()
 			.subscribe( (feed) => {
 				this.latestEpisode = feed.items[0];
 				this.feedLoaded = Promise.resolve(true);

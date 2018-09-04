@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { Http, Response } from '@angular/http';
-import { Observable } from 'rxjs';
+import { Observable, of } from 'rxjs';
 import { map } from 'rxjs/operators';
 import { Feed } from './model/feed';
 
@@ -8,14 +8,26 @@ import { Feed } from './model/feed';
 export class RssFeedService {
 
   private rssToJsonServiceBaseUrl: string = 'https://rss2json.com/api.json?rss_url=';
+  private feed: Feed;
 
   constructor(
     private http: Http
   ) { }
 
-  getFeedContent(url: string): Observable<Feed> {
-    return this.http.get(this.rssToJsonServiceBaseUrl + url)
-            .pipe(map(this.extractFeeds));
+  getFeedContent(url: string = 'https://edgeguard.podbean.com/feed.xml'): Observable<Feed> {
+	if (this.feed) {
+		return of(this.feed);
+	}
+	else {
+		let res = this.http.get(this.rssToJsonServiceBaseUrl + url)
+		.pipe(map(this.extractFeeds));
+		res.subscribe(feed => 
+			{
+				this.feed = feed;
+			});
+		return res;
+	}
+ 
   }
 
   private extractFeeds(res: Response): Feed {
