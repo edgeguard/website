@@ -1,0 +1,10 @@
+{
+  "hosting": {
+    "public": "dist/edgeguard-website",
+    "ignore": [
+      "firebase.json",
+      "**/.*",
+      "**/node_modules/**"
+    ]
+  }
+}

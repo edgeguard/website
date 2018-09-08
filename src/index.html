@@ -8,6 +8,20 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" media="none" onload="if(media!='all')media='all'">
   <link rel="icon" type="image/x-icon" href="favicon.ico">
+
+  <script src="https://www.gstatic.com/firebasejs/5.4.2/firebase.js"></script>
+	<script>
+	// Initialize Firebase
+	var config = {
+		apiKey: "AIzaSyCZW0pmI0cA3XcRxZsLr7CheEcpXISf5Us",
+		authDomain: "edge-guard-website.firebaseapp.com",
+		databaseURL: "https://edge-guard-website.firebaseio.com",
+		projectId: "edge-guard-website",
+		storageBucket: "edge-guard-website.appspot.com",
+		messagingSenderId: "427042118339"
+	};
+	firebase.initializeApp(config);
+</script>
 </head>
 <body>
   <app-root></app-root>
