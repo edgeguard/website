@@ -14,10 +14,11 @@ import { EpisodeDetailComponent } from './episode-detail/episode-detail.componen
 import { GuidPipe } from './guid.pipe';
 import { AboutPageComponent } from './about-page/about-page.component';
 import { ContactPageComponent } from './contact-page/contact-page.component';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
-    AppComponent,
+	AppComponent,
     NavbarComponent,
     EpisodesListComponent,
     EpisodeCardComponent,
@@ -31,9 +32,10 @@ import { ContactPageComponent } from './contact-page/contact-page.component';
   imports: [
     BrowserModule,
     HttpModule,
-    AppRoutingModule
+	AppRoutingModule,
+	HttpClientModule
   ],
-  providers: [RssFeedService],
+  providers: [RssFeedService, HttpClientModule],
   bootstrap: [AppComponent]
 })
 

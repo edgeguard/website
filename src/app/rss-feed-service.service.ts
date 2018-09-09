@@ -1,39 +1,36 @@
 import { Injectable } from '@angular/core';
-import { Http, Response } from '@angular/http';
 import { Observable, of } from 'rxjs';
-import { map } from 'rxjs/operators';
 import { Feed } from './model/feed';
+import { HttpClient, HttpParams } from '@angular/common/http';
 
 @Injectable()
 export class RssFeedService {
 
-  private rssToJsonServiceBaseUrl: string = 'https://rss2json.com/api.json?rss_url=';
+  private rssToJsonServiceBaseUrl: string = 'https://api.rss2json.com/v1/api.json';
   private feed: Feed;
 
   constructor(
-    private http: Http
+    private http: HttpClient
   ) { }
 
-  getFeedContent(url: string = 'https://edgeguard.podbean.com/feed.xml'): Observable<Feed> {
-	if (this.feed) {
-		return of(this.feed);
-	}
-	else {
-		let res = this.http.get(this.rssToJsonServiceBaseUrl + url)
-		.pipe(map(this.extractFeeds));
-		res.subscribe(feed => 
+	getFeedContent(url: string = 'https://edgeguard.podbean.com/feed.xml'): Observable<Feed> {
+		if (this.feed) {
+			return of(this.feed);
+		}
+		else {
+			let reqParams = new HttpParams()
+			.set("rss_url", url)
+			.set("api_key","ui9qc6ynpsuzkejlqwe51lqgkywglntr274glwkn")
+			.set("count", "1000");
+			let res = this.http.get<Feed>(this.rssToJsonServiceBaseUrl, { params: reqParams });
+
+			res.subscribe(feed => 
 			{
 				this.feed = feed;
 			});
-		return res;
+			return res;
+		}
 	}
- 
-  }
-
-  private extractFeeds(res: Response): Feed {
-    let feed = res.json();
-    return feed || { };
-  }
 
   private handleError (error: any) {
     // In a real world app, we might use a remote logging infrastructure
