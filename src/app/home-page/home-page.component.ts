@@ -9,14 +9,14 @@ import { RssFeedService } from '../rss-feed-service.service';
 })
 export class HomePageComponent implements OnInit {
 	feedLoaded: Promise<boolean>;
-	public latestEpisode: FeedEntry;
+	public latestEpisodes: FeedEntry[];
 
 	constructor( public rssService: RssFeedService) { }
 
 	ngOnInit() {
 		this.rssService.getFeedContent()
 			.subscribe( (feed) => {
-				this.latestEpisode = feed.items[0];
+				this.latestEpisodes = feed.items.slice(0,3);
 				this.feedLoaded = Promise.resolve(true);
 			});
 	}

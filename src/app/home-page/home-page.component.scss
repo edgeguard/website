@@ -1,0 +1,50 @@
+@import '../../styles.scss';
+
+:host {
+	color: $color-purple-dark;
+}
+
+.header {
+	text-align: center;
+	background-color: $color-white;
+	margin: -16px -16px 40px -16px;
+	font-size: 40px;
+	padding: 24px;
+
+	.text {
+		display: inline-block;
+		max-width: 800px;
+	}
+}
+
+.card-wrapper + .card-wrapper{
+	margin-top: 32px;
+}
+
+.main-content {
+	max-width: 800px;
+	margin: auto;
+}
+
+h2 {
+	
+}
+
+.episodes-link {
+	text-align: center;
+	font-size: 32px;
+	margin: auto;
+	margin-top: 32px;
+}
+
+.episodes-title {
+	color: $color-purple-dark;
+	text-align: center;
+	font-size: 32px;
+	margin: auto;
+	margin-bottom: 24px;
+}
+
+.footer {
+	height: 120px;
+}

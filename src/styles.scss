@@ -7,6 +7,7 @@ $color-purple-light: #9a7fc7;
 $color-purple-lightest: #e5e1f7;
 
 body {
+	color: $color-purple-dark;
 	box-sizing: border-box;
     background-color: $color-purple-lightest;
 	font-family: 'Montserrat', sans-serif;
