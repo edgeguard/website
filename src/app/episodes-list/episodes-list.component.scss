@@ -1,8 +1,16 @@
-.card-wrapper {
-	margin-top: 10px;
+.card-wrapper + .card-wrapper{
+	margin-top: 32px;
+}
+
+.main-content {
+	max-width: 800px;
+	margin: auto;
 }
 
 .title {
-	font-size: 24px;
+	text-align: center;
+	font-size: 32px;
+	margin: auto;
+	margin-bottom: 24px;
 	font-weight: bold;
 }

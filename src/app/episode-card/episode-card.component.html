@@ -1,15 +1,34 @@
 <div class="episode-card">
-	<div class="title">
-		{{ episodeData.title }}
+	<div class="top-section">
+		<div class="title-section">
+			<div class="number">
+				Episode {{ episodeNumber }}
+			</div>
+			<div class="title">
+				{{ episodeTitle }}
+			</div>
+		</div>
+		<audio controls>
+			<source src="{{episodeData?.enclosure.link}}" type="audio/mpeg">
+			It looks like your browser doesn't support audio elements! Sorry about that.
+		</audio>
 	</div>
-	<div class="description">
+	<div *ngIf="!expanded" class="description">
 		<span [innerHTML]="episodeData.description | truncate : 300"></span>
-		<a routerLink="/episodes/{{ episodeData.guid | guid }}">Read More</a>
+		<!-- <a routerLink="/episodes/{{ episodeData.guid | guid }}">Read More</a> -->
 	</div>
-
-	<audio controls>
-		<source src="{{episodeData?.enclosure.link}}" type="audio/mpeg">
-		It looks like your browser doesn't support audio elements! Sorry about that.
-	</audio>
+	<div *ngIf="expanded" class="description">
+			<span [innerHTML]="episodeData.description"></span>
+		</div>
+	<div class="show-more">
+		<div *ngIf="!expanded" (click)="expanded = true">
+			<span>Show More</span> 
+			<i class="material-icons">keyboard_arrow_down</i>
+		</div>
+		<div *ngIf="expanded" (click)="expanded = false">
+			<span>Show Less</span> 
+			<i class="material-icons">keyboard_arrow_up</i>
+		</div>
+	</div>
 </div>
  

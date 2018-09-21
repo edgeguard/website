@@ -1,9 +1,11 @@
-<div class="title">
-	Episodes:
-</div>
-
-<div *ngIf="feedLoaded | async">
-	<div class="card-wrapper" *ngFor="let item of episodes">
-		<episode-card [episodeData]="item"></episode-card>
+<div class="main-content">
+	<div class="title">
+		Available Episodes:
+	</div>
+	
+	<div *ngIf="feedLoaded | async">
+		<div class="card-wrapper" *ngFor="let item of episodes">
+			<episode-card [episodeData]="item"></episode-card>
+		</div>
 	</div>
 </div>
