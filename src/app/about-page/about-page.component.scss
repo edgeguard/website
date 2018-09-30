@@ -1,24 +1,89 @@
-h1 {
-	font: {
-		size: 32px;
-		weight: bold;
-	}
+@import '../../styles.scss';
+
+.page-title {
+	text-align: center;
+	font-size: 32px;
+	margin: auto;
+	margin-bottom: 24px;
+	font-weight: bold;
 }
 
-h2 {
+.bio-title {
 	margin: 0;
 	font: {
 		size: 24px;
-		weight: bold;
 	}
 }
 
-.bio-graf {
-	font-size: 24px;
+.about-graf {
+	font-size: 16px;
+	max-width: 540px;
+	flex: 1 1 280px;
+	margin: auto;
+}
+
+.main-content {
+	max-width: 800px;
+	margin: auto;
+}
+
+.find-us {
+	font-size: 16px;
+	margin-top: 16px;
+}
+
+.bio-title {
+	margin-bottom: 16px;
+}
+
+.bio-text {
+	font-size: 16px;
+	max-width: 540px;
+	flex: 1 1 280px;
+	margin: auto;
+}
+
+img {
+	margin: 0 auto 16px auto;
+	height: 280px;
+	width: 280px;
+	border-radius: 5px;
+}
+
+.card {
+	background-color: $color-white;
+	color: $color-purple-dark;
+	box-shadow: 5px 5px 8px -2px $color-purple-dark;
+	border-radius: 4px;
+	padding: 16px;
+	.a {
+		font-size: 16px;
+	}
 	margin-bottom: 24px;
 }
 
-p {
-	margin-top: 8px;
-	font-size: 16px;
+.card-flex {
+	display: flex;
+	flex-wrap: wrap;
+	align-content: center;
+}
+
+@media screen and (min-width: 600px) {
+	img {
+		margin: 0 16px 0 0;
+		height: 200px;
+		width: 200px;
+	}
+
+	.bio-text {
+		margin: 0px;
+	}
+
+	.find-us {
+		font-size: 24px;
+	}
+	
+	.about-graf {
+		font-size: 18px;
+	}
 }
