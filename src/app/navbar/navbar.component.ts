@@ -15,7 +15,9 @@ export class NavbarComponent implements OnInit {
   }
 
   toggleHidden() {
-	  this.hidden = !this.hidden;
+	if(!this.hidden) {
+		this.hidden = true;
+	}
   }
 
 }

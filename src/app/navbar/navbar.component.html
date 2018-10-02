@@ -4,12 +4,17 @@
 				<div class="navbar-text" routerLink="/" (click)="toggleHidden()">
 					EDGE <span class="guard">GUARD</span>
 				</div>
-				<div class="menu-icon"  (click)="toggleHidden()">
+				<div class="menu-icon"  (click)="hidden=!hidden">
 					<i class="material-icons">menu</i>
 				</div>
+				<div class="desktop-links">
+					<span class="link" routerLink="/about">About</span>
+					<span class="link" routerLink="/episodes">Episodes</span>
+					<span class="link" routerLink="/contact">Contact</span>
+				</div> 
 			</div>
 		</div>
-		<div class="menu" *ngIf="!hidden">
+		<div class="mobile-menu" *ngIf="!hidden">
 				<div routerLink="/about" (click)="hidden=!hidden">About</div>
 				<div routerLink="/episodes" (click)="hidden=!hidden">Episodes</div>
 				<div routerLink="/contact" (click)="hidden=!hidden">Contact Us</div>

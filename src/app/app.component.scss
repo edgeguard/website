@@ -2,5 +2,30 @@
 @import '../styles.scss';
 
 .main-padding {
+	flex-grow: 1;
 	padding: 16px;
+	margin-bottom: 40px;
 }
+
+.wrapper {
+	display: flex;
+	justify-content: space-between;
+	flex-direction: column;
+	min-height: calc(100% - 70px);
+}
+
+.footer {
+	height: 60px;
+	//margin-top: 40px;
+	color: $color-purple-dark;
+	background-color: $color-white;
+	display: flex;
+	justify-content: flex-end;
+	align-items: center;
+	font-size: 13px;
+
+	span {
+		margin-right: 48px;
+	}
+}
+

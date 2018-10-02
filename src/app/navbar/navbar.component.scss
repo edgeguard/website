@@ -35,10 +35,34 @@
 		display: flex;
 		justify-content: center;
 		align-items: center;
+		cursor: pointer;
 	}
 
-	.menu {
+	.mobile-menu {
 		padding: 8px 16px;
 		font-size: 16px;
+		div {
+			padding: 2px;
+			text-align: right;
+		}
+	}
+	
+	.desktop-links {
+		display: none;
+	}
+
+	@media screen and (min-width: $width-breakpoint) {
+		.mobile-menu, .menu-icon { 
+			display: none;
+		}
+
+		.desktop-links {
+			display: block;
+			.link {
+				font-size: 16px;
+				margin-right: 24px;
+				cursor: pointer;
+			}
+		}
 	}
 }
