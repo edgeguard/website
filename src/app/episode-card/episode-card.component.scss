@@ -3,7 +3,7 @@
 .episode-card {
 	background-color: $color-white;
 	color: $color-purple-dark;
-	box-shadow: 5px 5px 8px -2px $color-purple-dark;
+	box-shadow: 0 3px 5px 0 rgba($color-purple-dark, 0.2);
 	border-radius: 4px;
 	// border: solid 1px $color-purple-dark;
 	padding: 16px;

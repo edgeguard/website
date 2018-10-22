@@ -2,6 +2,8 @@
 	<div class="title">
 		Available Episodes:
 	</div>
+
+	<div *ngIf="!feedLoaded" class="loader">Loading...</div>
 	
 	<div *ngIf="feedLoaded | async">
 		<div class="card-wrapper" *ngFor="let item of episodes">

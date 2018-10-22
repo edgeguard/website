@@ -1,13 +1,5 @@
 @import '../../styles.scss';
 
-.page-title {
-	text-align: center;
-	font-size: 32px;
-	margin: auto;
-	margin-bottom: 24px;
-	font-weight: bold;
-}
-
 .bio-title {
 	margin: 0;
 	font: {
@@ -22,14 +14,8 @@
 	margin: auto;
 }
 
-.main-content {
-	max-width: 800px;
-	margin: auto;
-}
-
 .find-us {
 	font-size: 16px;
-	margin-top: 16px;
 }
 
 .bio-title {
@@ -54,22 +40,14 @@ img {
 	border-radius: 5px;
 }
 
-.card {
-	background-color: $color-white;
-	color: $color-purple-dark;
-	box-shadow: 5px 5px 8px -2px $color-purple-dark;
-	border-radius: 4px;
-	padding: 24px;
-	.a {
-		font-size: 16px;
-	}
-	margin-bottom: 24px;
-}
-
 .card-flex {
 	display: flex;
 	flex-wrap: wrap;
 	align-content: center;
+}
+
+.a {
+	font-size: 16px;
 }
 
 @media screen and (min-width: $width-breakpoint) {
